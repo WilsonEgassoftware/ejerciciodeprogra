@@ -1,0 +1,12 @@
+public double darTiempoPromedio() {
+    int totalCarros = 0;
+    int tiempoTotal = 0;
+    for (Puesto puesto : puestos) {
+        if (puesto.getCarro() != null) {
+            int tiempoParqueado = relojActual - puesto.getCarro().getHoraEntrada();
+            tiempoTotal += tiempoParqueado;
+            totalCarros++;
+        }
+    }
+    return totalCarros > 0 ? (double) tiempoTotal / totalCarros : 0.0;
+}
