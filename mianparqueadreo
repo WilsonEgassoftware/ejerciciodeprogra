@@ -1,0 +1,48 @@
+public class Main {
+    public static void main(String[] args) {
+        Parqueadero parqueadero = new Parqueadero(40, 10); // Asumiendo 40 puestos y una tarifa inicial de 10
+
+        // Ingresar carros
+        parqueadero.ingresarCarro(new Carro("ABC123", 7));
+        parqueadero.ingresarCarro(new Carro("PBZ456", 8));
+        parqueadero.ingresarCarro(new Carro("DEF789", 9));
+        
+        // Dar salida a un carro
+        parqueadero.darSalidaCarro("ABC123", 10);
+
+        // Informar ingresos del parqueadero
+        double ingresos = parqueadero.calcularIngresos();
+        System.out.println("Ingresos del parqueadero: " + ingresos);
+
+        // Consultar cantidad de puestos disponibles
+        int puestosDisponibles = parqueadero.cantidadPuestosDisponibles();
+        System.out.println("Puestos disponibles: " + puestosDisponibles);
+
+        // Avanzar el reloj del parqueadero
+        parqueadero.avanzarReloj(11); // Avanza el reloj a las 11
+
+        // Cambiar la tarifa del parqueadero
+        parqueadero.cambiarTarifa(15); // Cambia la tarifa a 15
+
+        // Otros métodos
+        double tiempoPromedio = parqueadero.darTiempoPromedio();
+        System.out.println("Tiempo promedio en el parqueadero: " + tiempoPromedio);
+
+        boolean carroMasDeOchoHoras = parqueadero.hayCarroMasDeOchoHoras();
+        System.out.println("Hay carro más de ocho horas: " + carroMasDeOchoHoras);
+
+        ArrayList<Carro> carrosTresHoras = parqueadero.darCarrosMasDeTresHorasParqueados();
+        System.out.println("Carros más de tres horas parqueados: " + carrosTresHoras.size());
+
+        boolean carrosPlacaIgual = parqueadero.hayCarrosPlacaIgual();
+        System.out.println("Hay carros con placa igual: " + carrosPlacaIgual);
+
+        int carrosConPB = parqueadero.contarCarrosQueComienzanConPlacaPB();
+        System.out.println("Carros con placa PB: " + carrosConPB);
+
+        boolean carro24Horas = parqueadero.hayCarroCon24Horas();
+        System.out.println("Hay carro con 24 o más horas: " + carro24Horas);
+
+        int carrosSacados = parqueadero.desocuparParqueadero();
+        System.out.println("Cantidad de carros sacados: " + carrosSacados);
+    }}
