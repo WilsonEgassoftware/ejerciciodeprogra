@@ -1,0 +1,14 @@
+public Carro darCarroMasHoras() {
+    Carro carroMasHoras = null;
+    int maxHoras = 0;
+    for (Puesto puesto : puestos) {
+        if (puesto.getCarro() != null) {
+            int horasParqueado = relojActual - puesto.getCarro().getHoraEntrada();
+            if (horasParqueado > maxHoras) {
+                maxHoras = horasParqueado;
+                carroMasHoras = puesto.getCarro();
+            }
+        }
+    }
+    return carroMasHoras;
+}
