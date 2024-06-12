@@ -1,0 +1,11 @@
+public boolean hayCarrosPlacaIgual() {
+    HashSet<String> placas = new HashSet<>();
+    for (Puesto puesto : puestos) {
+        if (puesto.getCarro() != null) {
+            if (!placas.add(puesto.getCarro().getPlaca())) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
