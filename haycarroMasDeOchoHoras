@@ -1,0 +1,11 @@
+public boolean hayCarroMasDeOchoHoras() {
+    for (Puesto puesto : puestos) {
+        if (puesto.getCarro() != null) {
+            int horasParqueado = relojActual - puesto.getCarro().getHoraEntrada();
+            if (horasParqueado > 8) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
