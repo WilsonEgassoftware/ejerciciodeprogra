@@ -1,0 +1,10 @@
+//metodo numero 3
+public int contarCarrosQueComienzanConPlacaPB() {
+    int contador = 0;
+    for (Puesto puesto : puestos) {
+        if (puesto.getCarro() != null && puesto.getCarro().getPlaca().startsWith("PB")) {
+            contador++;
+        }
+    }
+    return contador;
+}
