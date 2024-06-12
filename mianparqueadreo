@@ -45,4 +45,5 @@ public class Main {
 
         int carrosSacados = parqueadero.desocuparParqueadero();
         System.out.println("Cantidad de carros sacados: " + carrosSacados);
-    }}
+    }
+}
