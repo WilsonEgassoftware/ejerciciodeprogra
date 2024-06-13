@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Parqueadero parqueadero = new Parqueadero(40, 10); // Asumiendo 40 puestos y una tarifa inicial de 10
+        Parqueadero parqueadero = new Parqueadero(40, 10); // 40 puestos y una tarifa inicial de 10
 
         // Ingresar carros
         parqueadero.ingresarCarro(new Carro("ABC123", 7));
@@ -47,3 +47,4 @@ public class Main {
         System.out.println("Cantidad de carros sacados: " + carrosSacados);
     }
 }
+
