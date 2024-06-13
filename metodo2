@@ -1,0 +1,5 @@
+//realizar otro metodo para que retorne un mensaje
+public String metodo2() {
+    int carrosSacados = desocuparParqueadero();
+    return "Cantidad de carros sacados: " + carrosSacados;
+}
