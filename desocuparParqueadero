@@ -1,0 +1,11 @@
+//desocupar el parqueo
+public int desocuparParqueadero() {
+    int carrosSacados = 0;
+    for (Puesto puesto : puestos) {
+        if (puesto.getCarro() != null) {
+            puesto.setCarro(null);
+            carrosSacados++;
+        }
+    }
+    return carrosSacados;
+}
