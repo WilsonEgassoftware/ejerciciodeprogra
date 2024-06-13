@@ -1,0 +1,7 @@
+//modificamos metodo 1
+public String metodo1() {
+    int carrosConPB = contarCarrosQueComienzanConPlacaPB();
+    boolean carro24Horas = hayCarroCon24Horas();
+    return "Cantidad de carros con placa PB: " + carrosConPB + 
+           " - Hay carro parqueado por 24 o más horas: " + (carro24Horas ? "Sí" : "No");
+}
