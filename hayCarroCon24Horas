@@ -1,0 +1,12 @@
+// metodo 3.2  parqueo mas de 24 horas
+public boolean hayCarroCon24Horas() {
+    for (Puesto puesto : puestos) {
+        if (puesto.getCarro() != null) {
+            int horasParqueado = relojActual - puesto.getCarro().getHoraEntrada();
+            if (horasParqueado >= 24) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
